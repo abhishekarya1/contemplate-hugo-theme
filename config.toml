@@ -1,0 +1,18 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'contem.'
+
+# hugo
+enableEmoji = true
+enableInlineShortcodes = true
+paginate = 6
+
+# custom
+[params]
+	tabTitle = "comtem.plate"
+	enableRuleLine = true
+	enableFooter = true
+	titleHalf = "plate"
+	logo = "🍽️"
+	mysite="https://www.abhishekarya.com"
+	accentColor = "#ffffff"

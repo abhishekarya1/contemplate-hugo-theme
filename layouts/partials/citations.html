@@ -1,0 +1,14 @@
+<div class = "citations">
+  <code>
+  <details close>
+    <summary>citations</summary>
+    <ul>
+      {{ range .Params.Citations }}
+      <li>
+        <a class = "link" href="{{ . }}">{{ . }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </details>
+</code>
+</div>

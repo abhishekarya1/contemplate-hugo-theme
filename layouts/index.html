@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body lang="{{ .Site.LanguageCode }}" class="w-2/5 mx-auto py-10">
+    <section id="main">
+      <div>
+        <h1 id="title" class="font-bold mb-5">{{ .Site.Title }}<span class="title-half">{{ .Site.Params.titleHalf }}</span>
+        </h1>
+        {{ if .Site.Params.enableRuleLine }}
+        <hr>
+        {{ end }}
+        {{ $paginator := .Paginator }}
+        {{ range $paginator.Pages }}
+        <ul class="">
+          <li class="my-2">
+            <u>
+              <b>{{ .Title }}</b>
+            </u>
+            <small> {{ .Description }}</small>
+            {{ if .Params.Citations }}
+            <br>
+            {{ partial "citations" . }}
+            {{ end }}
+          </li>
+        </ul>
+        {{ end }}
+      </div>
+      {{ partial "pagination_nav" . }}
+    </section>
+    {{ if .Site.Params.enableFooter }}
+    {{ partial "footer" }}
+    {{ end }}
+  </body>
+</html>
