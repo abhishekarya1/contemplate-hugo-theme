@@ -8,6 +8,6 @@ tags:
 - 'lorem'
 - 'ipsum'	
 date: {{ .Date }}
-draft: true
+draft: false
 ---
 
