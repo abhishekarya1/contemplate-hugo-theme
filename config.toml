@@ -4,7 +4,7 @@ title = "contem."
 theme = "contemplate-hugo"
 
 # hugo
-paginate = 5
+paginate = 10
 #paginatePath = "/"
 
 # custom
@@ -16,3 +16,6 @@ paginate = 5
 	logo = "🍽️"
 	mySite="https://www.abhishekarya.com"
 
+# tags
+[taxonomies]
+  tag = 'tags'

@@ -11,25 +11,12 @@
         {{ end }}
         {{ $paginator := .Paginator }}
         {{ range $paginator.Pages }}
-        <ul class="">
-          <li class="my-2">
-            <u>
-              <b>{{ .Title }}</b>
-            </u>
-            <small> {{ .Description }}</small>
-            {{ if .Params.Citations }}
-            <br>
-            {{ partial "citations" . }}
-            {{ end }}
-          </li>
-        </ul>
+        <u><a href="{{ .Permalink }}">{{ .Title }}</a></u>&nbsp;&nbsp;
         {{ end }}
-      </div>
-      {{ partial "pagination_nav" . }}
-        
+      </div>  
     </section>
     {{ if .Site.Params.enableFooter }}
-    {{ .Scratch.Set "goto" "parent" }}
+    {{ .Scratch.Set "goto" "main" }}
     {{ partial "footer" . }}
     {{ end }}
   </body>

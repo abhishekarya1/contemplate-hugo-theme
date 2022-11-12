@@ -1,5 +1,10 @@
 <footer>
 	<div>
-		<u><small><a href="{{ .Site.Params.mySite }}">Go back to main site ↩</a></small></u>
+		{{ if eq (.Scratch.Get "goto") "main" }}
+		<u><small><a href="{{ .Site.BaseURL }}">Go back to {{ .Scratch.Get "goto" }} site ↩</a></small></u>
+		{{ else }}
+		<u><small><a href="{{ .Site.Params.mySite }}">Go back to {{ .Scratch.Get "goto" }} site ↩</a></small></u>
+		{{ end }}
+		
 	</div>
 </footer>
