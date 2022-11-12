@@ -1,14 +1,11 @@
-baseURL = "http://localhost:1313"
+baseURL = "/"
 languageCode = "en-us"
 title = "contem."
 theme = "contemplate-hugo"
 
 # hugo
-enableEmoji = true
-enableInlineShortcodes = false
 paginate = 5
 #paginatePath = "/"
-
 
 # custom
 [params]
@@ -18,5 +15,4 @@ paginate = 5
 	titleHalf = "plate"
 	logo = "🍽️"
 	mySite="https://www.abhishekarya.com"
-
 
