@@ -5,11 +5,16 @@
     <section id="main">
       <div>
         <h1 id="title" class="font-bold mb-5">{{ .Site.Title }}<span class="title-half">{{ .Site.Params.titleHalf }}</span>
-          <span class="tags-header"><a href="/tags"><u>tags</u></a></span> 
+        <span class="tags-header"><a href="/"><u>main</u></a></span>
         </h1>
         {{ if .Site.Params.enableRuleLine }}
         <hr>
         {{ end }}
+
+        {{ if isset .Data "Term" }}
+        <h1>All under tag - "<i class="tag">{{ .Data.Term }}</i>"</h1>
+        {{ end }}
+
         {{ $paginator := .Paginator }}
         {{ range $paginator.Pages }}
         <ul class="">
@@ -25,13 +30,12 @@
           </li>
         </ul>
         {{ end }}
-      </div>
-      {{ partial "pagination_nav" . }}
-        
+      </div>  
     </section>
     {{ if .Site.Params.enableFooter }}
-    {{ .Scratch.Set "goto" "parent" }}
+    {{ .Scratch.Set "goto" "main" }}
     {{ partial "footer" . }}
     {{ end }}
   </body>
 </html>
+
