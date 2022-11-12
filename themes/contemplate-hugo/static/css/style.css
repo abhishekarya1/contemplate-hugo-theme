@@ -20,8 +20,10 @@ html {
  * Remove the margin in all browsers.
  */
 
+/* light mode */
 body {
   margin: 0;
+  background-color: cornsilk;
 }
 
 /**
