@@ -14,10 +14,10 @@
         {{ range $paginator.Pages }}
         <ul class="">
           <li class="my-2">
-            <u>
-              <b>{{ .Title }}</b>
+            <u title="{{ .Title }}">
+              <b>{{ .Description }}</b>
             </u>
-            <small> {{ .Description }}</small>
+            <small> {{ .Summary }}</small>
             {{ if .Params.Citations }}
             <br>
             {{ partial "citations" . }}
